@@ -81,8 +81,10 @@ void fillNumArray(){
 
 //exposes a single cell
 void expose(int X, int Y){
-	numberArrayChar[X][Y] = 48 + numberArray[X][Y];
-	expCount++;
+	if(numberArrayChar[X][Y] != 48 + numberArray[X][Y]){
+		numberArrayChar[X][Y] = 48 + numberArray[X][Y];
+		expCount++;
+	}
 }
 
 //exposes with cascading effect
